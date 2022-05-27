@@ -1,4 +1,4 @@
-package team7.capstone.domain;
+package team7.capstone.domain.vo;
 
 
 import lombok.Getter;
