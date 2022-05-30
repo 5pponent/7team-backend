@@ -7,7 +7,6 @@ import team7.capstone.domain.UserVO;
 
 import javax.sql.DataSource;
 import java.sql.*;
-import java.util.List;
 import java.util.Optional;
 
 @Repository
@@ -53,6 +52,7 @@ public class JdbcUserRepository implements UserRepository {
             rs = pstmt.executeQuery();
             if (rs.next()) {
                 UserVO u = new UserVO();
+                u.setUser_seq(rs.getLong("user_seq"));
                 u.setId(user_id);
                 u.setPassword(rs.getString("password"));
                 return Optional.of(u);
