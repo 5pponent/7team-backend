@@ -3,10 +3,11 @@ package team7.capstone.domain;
 import lombok.Getter;
 import lombok.Setter;
 
+import javax.validation.constraints.Email;
 import javax.validation.constraints.NotBlank;
 
 @Getter @Setter
-public class LoginVO {
+public class JoinVo {
 
     @NotBlank
     private String id;
@@ -14,11 +15,14 @@ public class LoginVO {
     @NotBlank
     private String password;
 
-    public LoginVO() {
-    }
+    @NotBlank
+    private String passwordCheck;
 
-    public LoginVO(String id, String password) {
-        this.id = id;
-        this.password = password;
-    }
+    @NotBlank
+    private String name;
+
+    @NotBlank
+    @Email
+    private String email;
+
 }
