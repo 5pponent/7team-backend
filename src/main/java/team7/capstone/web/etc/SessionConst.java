@@ -1,4 +1,4 @@
-package team7.capstone.web;
+package team7.capstone.web.etc;
 
 public class SessionConst {
 

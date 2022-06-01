@@ -9,4 +9,5 @@ public interface UserRepository {
 
     UserVO save(UserVO user);
     Optional<UserVO> findById(String user_id);
+
 }

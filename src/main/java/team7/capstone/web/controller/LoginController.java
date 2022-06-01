@@ -12,7 +12,7 @@ import team7.capstone.domain.UserVO;
 import team7.capstone.repository.user.UserRepository;
 import team7.capstone.service.LoginService;
 import team7.capstone.web.ResponseError;
-import team7.capstone.web.SessionConst;
+import team7.capstone.web.etc.SessionConst;
 
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpSession;
