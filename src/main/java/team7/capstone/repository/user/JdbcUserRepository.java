@@ -55,6 +55,10 @@ public class JdbcUserRepository implements UserRepository {
                 u.setUser_seq(rs.getLong("user_seq"));
                 u.setId(user_id);
                 u.setPassword(rs.getString("password"));
+                u.setName(rs.getString("name"));
+                u.setEmail(rs.getString("email"));
+                u.setJob(rs.getString("job"));
+                u.setCategory(rs.getString("category"));
                 return Optional.of(u);
             }
             return Optional.empty();
