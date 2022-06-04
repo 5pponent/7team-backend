@@ -30,6 +30,9 @@ dependencies {
 	// jdbc db connector
 	implementation 'org.springframework.boot:spring-boot-starter-jdbc'
 
+	// MyBatis Framework
+	implementation 'org.mybatis.spring.boot:mybatis-spring-boot-starter:2.2.2'
+
 	// hibernate validation
 	implementation 'org.springframework.boot:spring-boot-starter-validation'
 	runtimeOnly 'mysql:mysql-connector-java'
