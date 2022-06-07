@@ -2,17 +2,18 @@ package team7.capstone.web;
 
 import lombok.Getter;
 import lombok.Setter;
+import lombok.ToString;
 import lombok.extern.slf4j.Slf4j;
 
 import java.util.Map;
 import java.util.concurrent.ConcurrentHashMap;
 
-@Getter @Setter @Slf4j
-public class ResponseError {
+@Getter @Setter @ToString
+public class ResponseErrors {
 
     private Map<String, String> errors;
 
-    public ResponseError() {
+    public ResponseErrors() {
         this.errors = new ConcurrentHashMap<>();
     }
 

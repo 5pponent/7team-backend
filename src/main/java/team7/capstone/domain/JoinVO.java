@@ -25,4 +25,8 @@ public class JoinVO {
     @Email
     private String email;
 
+    public boolean passwordCheck() {
+        return this.password.equals(this.passwordCheck);
+    }
+
 }
