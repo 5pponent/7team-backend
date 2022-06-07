@@ -18,18 +18,18 @@ class LoginServiceTest {
     @Test
     void login() {
         //given
-        LoginVO userExsists = new LoginVO();
+        LoginVO userExist = new LoginVO();
         LoginVO userNotExists = new LoginVO();
-        userExsists.setId("bbb"); userExsists.setPassword("bbb");
+        userExist.setId("bbb"); userExist.setPassword("bbb");
         userNotExists.setId("aaa"); userNotExists.setPassword("aaad");
 
         //when
-        UserVO loginUser = loginService.login(userExsists);
+        UserVO loginUser = loginService.login(userExist);
         UserVO notUser = loginService.login(userNotExists);
 
         //then
-        Assertions.assertThat(loginUser.getId()).isEqualTo(userExsists.getId());
-        Assertions.assertThat(loginUser.getPassword()).isEqualTo(userExsists.getPassword());
+        Assertions.assertThat(loginUser.getId()).isEqualTo(userExist.getId());
+        Assertions.assertThat(loginUser.getPassword()).isEqualTo(userExist.getPassword());
         Assertions.assertThat(notUser).isNull();
     }
 }
