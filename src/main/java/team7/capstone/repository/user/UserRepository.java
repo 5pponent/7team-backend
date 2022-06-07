@@ -6,8 +6,6 @@ import team7.capstone.domain.UserVO;
 
 import java.util.Optional;
 
-@Repository
-@Mapper
 public interface UserRepository {
 
     UserVO save(UserVO user);

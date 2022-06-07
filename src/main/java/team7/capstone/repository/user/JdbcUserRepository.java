@@ -1,4 +1,3 @@
-/*
 package team7.capstone.repository.user;
 
 import lombok.RequiredArgsConstructor;
@@ -15,6 +14,16 @@ import java.util.Optional;
 public class JdbcUserRepository implements UserRepository {
 
     private final DataSource dataSource;
+
+    @Override
+    public void updateUser(UserVO user) {
+        
+    }
+
+    @Override
+    public void deleteUser(String id) {
+
+    }
 
     @Override
     public UserVO save(UserVO user) {
@@ -137,4 +146,3 @@ public class JdbcUserRepository implements UserRepository {
         DataSourceUtils.releaseConnection(conn, dataSource);
     }
 }
-*/

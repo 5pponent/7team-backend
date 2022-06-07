@@ -1,17 +1,26 @@
 package team7.capstone.web.controller;
 
+import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.web.bind.annotation.*;
 import team7.capstone.domain.FeedVO;
+import team7.capstone.service.FeedService;
+import team7.capstone.web.ResponseForm;
+
+import static team7.capstone.web.ResponseForm.ok;
 
 @Slf4j
 @RestController
+@RequiredArgsConstructor
 @RequestMapping("/feed")
 public class FeedController {
 
+    private final FeedService feedService;
+
     @GetMapping("/{feed_seq}")
     public Object getFeed(@PathVariable Long feed_seq) {
-        return "";
+        FeedVO feed = feedService.getFeed(feed_seq);
+        return ok(feed);
     }
 
     @GetMapping("/list/{lastFeed_seq}")
