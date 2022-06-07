@@ -20,8 +20,17 @@ public class LoginService {
     }
 
     public UserVO join(JoinVO form) {
-        UserVO save = userRepository.save(new UserVO(form.getId(), form.getPassword(), form.getName(), form.getEmail()));
-        return userRepository.findById(form.getId()).get();
+        return userRepository.save(new UserVO(form.getId(), form.getPassword(), form.getName(), form.getEmail()));
+    }
+
+    /**
+     * true : 이미 존재하는 ID
+     */
+    public boolean idCheck(String id) {
+        if (userRepository.findById(id).isPresent()) {
+            return true;
+        }
+        return false;
     }
 
 }

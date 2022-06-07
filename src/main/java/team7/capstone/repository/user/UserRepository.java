@@ -8,6 +8,7 @@ import java.util.Optional;
 public interface UserRepository {
 
     UserVO save(UserVO user);
-    Optional<UserVO> findById(String user_id);
+    Optional<UserVO> findById(String id);
+    Optional<UserVO> findBySeq(Long user_seq);
 
 }
