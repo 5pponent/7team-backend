@@ -1,3 +1,4 @@
+/*
 package team7.capstone.repository.user;
 
 import lombok.RequiredArgsConstructor;
@@ -101,3 +102,4 @@ public class JdbcUserRepository implements UserRepository {
         DataSourceUtils.releaseConnection(conn, dataSource);
     }
 }
+*/
