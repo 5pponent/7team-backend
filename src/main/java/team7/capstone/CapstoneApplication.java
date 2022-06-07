@@ -10,4 +10,7 @@ public class CapstoneApplication {
 		SpringApplication.run(CapstoneApplication.class, args);
 	}
 
+	//주서ㅏㄱ
+
+	//wntjr2
 }

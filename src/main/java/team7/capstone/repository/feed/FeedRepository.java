@@ -8,8 +8,13 @@ import java.util.Optional;
 public interface FeedRepository {
 
     Optional<FeedVO> save(FeedVO feed);
+
     Optional<FeedVO> findBySeq(Long feed_seq);
+
     List<FeedVO> getFeeds(Long lastFeed_seq);
+
     void deleteFeed(Long feed_seq);
+
+    void modifyFeed(FeedVO feed);
 
 }

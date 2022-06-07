@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="team7.capstone.repository.user.UserRepository">
+
+    <select id="findById" resultType="user.UserVO">
+        select user_id from user where user_id = #{user_id}
+    </select>
+
+    <insert id="save">
+        insert into user(user_id, password, name, email) values(#{user_id}, #{password}, #{name}, #{email})
+    </insert>
+
+    <!--<update id="updateUser">
+        update user set user_id = #{user_id}, password = #{password}, name = #{name}, email = #{email}
+        where user_id = #{user_id}
+    </update>-->
+
+    <delete id="deleteUser">
+        delete from user
+        where user_id = #{user_id}
+    </delete>
+
+</mapper>
